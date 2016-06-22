@@ -3,7 +3,7 @@
 ## You have just stumbled upon a superbly early version of a .Net CMS, right now it is an 
 aggregation of shared code across several small websites. Soon it will be awesome, right now, it's in progress. :)
 
-## DexCMS.Base Development Rules
+## DexCMS.Calendars Development Rules
 * This library is for code specific to the Alerts domain
 * It contains 3 libraries:
 	* DexCMS.Calendars
