@@ -1,0 +1,10 @@
+{
+  "name": "dexcms-calendars-client",
+  "version": "0.0.0",
+  "description": "DexCMS.Calendars.Client",
+  "main": "app.js",
+  "author": {
+    "name": "Cyricx",
+    "email": "contact@chrisbyram.com"
+  }
+}

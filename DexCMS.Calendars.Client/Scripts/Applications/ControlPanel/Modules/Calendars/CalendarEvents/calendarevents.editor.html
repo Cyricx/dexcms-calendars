@@ -1,0 +1,78 @@
+﻿<div class="col-xs-12">
+    <h2>{{title}}</h2>
+    <form name="manageCalendarEvents" novalidate>
+        <div class="panel-body">
+            <div class="form-group">
+                <label for="calendarID">Calendar:</label>
+                <select name="calendarID" id="calendarID" ng-model="currentItem.calendarID" required
+                        ng-options="item.calendarID as item.title for item in calendars"></select>
+            </div>
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input class="form-control" name="title" id="title" required
+                       ng-model="currentItem.title" />
+            </div>
+            <div class="form-group">
+                <label for="startDate">Start Date:</label>
+                <datetimepicker max-date="currentItem.endDate" mousewheel="false" name="startDate" show-spinners="true"
+                                required ng-model="currentItem.startDate" date-format="MM/dd/yyyy"></datetimepicker>
+                <span class="control-label text-danger"
+                      ng-show="!currentItem.startDate"><strong><i class="fa fa-times"></i> Start Date is required</strong></span>
+                <span class="control-label text-danger"
+                      ng-show="currentItem.endDate && currentItem.startDate > currentItem.endDate">
+                    <i class="fa fa-times"></i>  Start Date must be lower than End Date.
+                </span>
+            </div>
+            <div class="form-group checkbox">
+                <label>
+                    <input type="checkbox" id="allDay" name="allDay" ng-change="currentItem.allDay ? currentItem.endDate = null : ''" ng-model="currentItem.allDay">
+                    All day event?
+                </label>
+            </div>
+            <div class="form-group" ng-if="!currentItem.allDay">
+                <label for="endDate">End Date:</label>
+                <datetimepicker min-date="currentItem.startDate" mousewheel="false" ng-model="currentItem.endDate" show-spinners="true" date-format="MM/dd/yyyy"></datetimepicker>
+            </div>
+
+            <div class="form-group">
+                <label for="calendarEventLocationID">Location:</label>
+                <select class="form-control" name="calendarEventLocationID" id="calendarEventLocationID" ng-model="currentItem.calendarEventLocationID" 
+                        ng-options="item.calendarEventLocationID as item.name for item in calendarEventLocations">
+                    <option value="">[- Other -]</option>
+                </select>
+            </div>
+            <div class="form-group" ng-if="!currentItem.calendarEventLocationID">
+                <label for="location">Other Location:</label>
+                <textarea class="form-control" name="location" id="location" required
+                          ng-model="currentItem.location"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="details">Details:</label>
+                <ttcms-html-editor
+                          ng-model="currentItem.details"></ttcms-html-editor>
+            </div>
+            <div class="form-group">
+                <label for="calendarEventTypeID">Event Type:</label>
+                <select name="calendarEventTypeID" id="calendarEventTypeID" ng-model="currentItem.calendarEventTypeID" required
+                        ng-options="item.calendarEventTypeID as item.name for item in calendarEventTypes"></select>
+            </div>
+            <div class="form-group">
+                <label for="calendarEventStatusID">Event Status:</label>
+                <select name="calendarEventStatusID" id="calendarEventStatusID" ng-model="currentItem.calendarEventStatusID" required
+                        ng-options="item.calendarEventStatusID as item.name for item in calendarEventStatuses"></select>
+            </div>
+            <div class="form-group">
+                <label for="cssClass">CSS Class:</label>
+                <input class="form-control" name="cssClass" id="cssClass"
+                       ng-model="currentItem.cssClass" />
+            </div>
+            <div class="form-group">
+                <label for="eventURL">URL: (include http:// or https://)</label>
+                <input class="form-control" type="url" name="eventURL" id="eventURL"
+                       ng-model="currentItem.eventURL" />
+            </div>
+            <button class="btn btn-primary" ng-disabled="manageCalendarEvents.$invalid" ng-click="save(currentItem)">Save</button>
+            <a class="btn btn-primary" ui-sref="calendarevents">Cancel</a>
+        </div>
+    </form>
+</div>

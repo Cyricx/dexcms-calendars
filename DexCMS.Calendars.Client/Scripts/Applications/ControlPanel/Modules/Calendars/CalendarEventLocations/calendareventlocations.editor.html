@@ -1,0 +1,71 @@
+﻿<div class="col-xs-12">
+    <h2>{{title}}</h2>
+    <form name="manageCalendarEventLocations" novalidate angular-validator 
+          angular-validator-submit="save(currentItem)">
+        <div class="panel-body">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input class="form-control" name="name" id="name" required
+                       validate-on="dirty"
+                       ng-model="currentItem.name" />
+            </div>
+            <div class="form-group">
+                <label for="additionalDetails">Additional Details:</label>
+                <ttcms-html-editor ng-model="currentItem.additionalDetails"></ttcms-html-editor>
+            </div>
+
+            <div class="form-group" ng-if="currentItem.mapIconImage">
+                <label>Map Icon Image</label>
+                <div>
+                    <img class="img-responsive img-rounded img-small"
+                         ng-src="../{{currentItem.mapIconImage}}" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="replacementFileName">New File</label>
+                <strong ng-show="currentItem.imageID" class="text-warning">(If loading a new image please be sure to refresh your browser afterwords.)</strong>
+                <img ng-if="currentItem.replacementFileName" width="100"
+                     ng-src="../tmp/fileUploads/{{currentItem.temporaryFileName }}" />
+                <button ng-show="currentItem.replacementFileName" type="button"
+                        class="btn btn-danger" ng-click="removeNewFile()">
+                    <i class="fa fa-trash-o"></i>
+                </button>
+
+                <div ng-hide="currentItem.replacementFileName" ngf-drop ng-model="files"
+                     class="drop-box"
+                     ngf-drag-over-class="dragover" ngf-multiple="true" ngf-allow-dir="true"
+                     ngf-accept="'.jpg,.png,.pdf'">Drop Images here</div>
+                <div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
+
+            </div>
+            <div class="form-group" ng-if="currentItem.replacementFileName || currentItem.mapIconImage">
+                <label for="mapXCoordinate">X Coordinate (Left to Right):</label>
+                <input class="form-control" type="number" name="mapXCoordinate"
+                       id="mapXCoordinate" step="1"
+                       ng-model="currentItem.mapXCoordinate" />
+            </div>
+            <div class="form-group" ng-if="currentItem.replacementFileName || currentItem.mapIconImage">
+                <label for="mapYCoordinate">Y Coordinate (Top to Bottom):</label>
+                <input class="form-control" type="number" name="mapYCoordinate"
+                       id="mapYCoordinate" step="1"
+                       ng-model="currentItem.mapYCoordinate" />
+            </div>
+            <div class="form-group checkbox">
+                <label>
+                    <input type="checkbox" id="isActive" name="isActive" 
+                           ng-model="currentItem.isActive">
+                    Is Active?
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="displayOrder">Display Order:</label>
+                <input class="form-control" type="number" name="displayOrder"
+                       id="displayOrder" step="1"
+                       ng-model="currentItem.displayOrder" />
+            </div>
+            <button class="btn btn-primary" ng-disabled="manageCalendarEventLocations.$invalid" 
+                    >Save</button>
+            <a class="btn btn-primary" ui-sref="calendareventlocations">Cancel</a>
+        </div>
+    </form>
+</div>
