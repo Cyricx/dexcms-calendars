@@ -31,7 +31,57 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="Configurations\controlpanel.calendars.navigation.js" />
+    <Compile Include="Configurations\controlpanel.calendars.routes.js" />
+    <Compile Include="Configurations\index.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventLocations\calendareventlocations.editor.controller.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventLocations\calendareventlocations.list.controller.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventLocations\calendareventlocations.service.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventLocations\index.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventStatuses\calendareventstatuses.editor.controller.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventStatuses\calendareventstatuses.list.controller.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventStatuses\calendareventstatuses.service.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventStatuses\index.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEvents\calendarevents.editor.controller.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEvents\calendarevents.list.controller.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEvents\calendarevents.service.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEvents\index.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventTypes\calendareventtypes.editor.controller.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventTypes\calendareventtypes.list.controller.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventTypes\calendareventtypes.service.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventTypes\index.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\Calendars\calendars.editor.controller.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\Calendars\calendars.list.controller.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\Calendars\calendars.service.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\Calendars\index.js" />
+    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\module.js" />
     <Content Include="package.json" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventLocations\calendareventlocations.editor.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventLocations\calendareventlocations.list.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventStatuses\calendareventstatuses.editor.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventStatuses\calendareventstatuses.list.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEvents\calendarevents.editor.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEvents\calendarevents.list.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventTypes\calendareventtypes.editor.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventTypes\calendareventtypes.list.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\Calendars\calendars.editor.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\Calendars\calendars.list.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configurations\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="Scripts\Applications\" />
+    <Folder Include="Scripts\Applications\ControlPanel\" />
+    <Folder Include="Scripts\Applications\ControlPanel\Modules\" />
+    <Folder Include="Scripts\Applications\ControlPanel\Modules\Calendars\" />
+    <Folder Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventLocations\" />
+    <Folder Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventStatuses\" />
+    <Folder Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEvents\" />
+    <Folder Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventTypes\" />
+    <Folder Include="Scripts\Applications\ControlPanel\Modules\Calendars\Calendars\" />
+    <Folder Include="Scripts\Applications\Secure\" />
+    <Folder Include="Scripts\Applications\Secure\Modules\" />
+    <Folder Include="Scripts\Globals\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
