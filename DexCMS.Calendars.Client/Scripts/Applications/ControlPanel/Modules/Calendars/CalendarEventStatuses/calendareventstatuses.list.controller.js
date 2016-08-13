@@ -4,28 +4,37 @@
     app.controller('calendarEventStatusesListCtrl', [
         '$scope',
         'CalendarEventStatuses',
-        'DTOptionsBuilder',
-        'DTColumnBuilder',
-        '$compile',
         '$window',
-        function ($scope, CalendarEventStatuses, DTOptionsBuilder, DTColumnBuilder, $compile, $window) {
+        'dexCMSControlPanelSettings',
+        function ($scope, CalendarEventStatuses, $window, dexcmsSettings) {
             $scope.title = "View Event Statuses";
 
-            $scope.dtOptions = DTOptionsBuilder.fromFnPromise(function () {
-                return CalendarEventStatuses.getList();
-            }).withBootstrap().withOption('createdRow', createdRow);
+            $scope.table = {
+                columns: [
+                    { property: 'calendarEventStatusID', title: 'ID' },
+                    { property: 'name', title: 'Name' },
+                    { property: 'isActive', title: 'Active?' },
+                    {
+                        property: '', title: '', disableSorting: true,
+                        dataTemplate: dexcmsSettings.startingRoute + 'modules/calendars/calendareventstatuses/_calendareventstatuses.list.buttons.html'
+                    }
+                ],
+                defaultSort: 'calendarEventStatusID',
+                functions: {
+                    remove: function (id) {
+                        if (confirm('Are you sure?')) {
+                            CalendarEventStatuses.deleteItem(id).then(function (response) {
+                                $window.location.reload();
+                            });
+                        }
+                    }
+                },
+                filePrefix: 'Calendar-Event-Statuses'
+            };
 
-            $scope.dtColumns = [
-                DTColumnBuilder.newColumn('calendarEventStatusID').withTitle('ID'),
-                DTColumnBuilder.newColumn('name').withTitle('Name'),
-                DTColumnBuilder.newColumn('isActive').withTitle('Active?'),
-                DTColumnBuilder.newColumn(null).withTitle('').notSortable().renderWith(actionsHtml)
-            ];
-
-            function createdRow(row, data, dataIndex) {
-                // Recompiling so we can bind Angular directive to the DT
-                $compile(angular.element(row).contents())($scope);
-            }
+            CalendarEventStatuses.getList().then(function (data) {
+                $scope.table.promiseData = data;
+            });
 
             function actionsHtml(data, type, full, meta) {
                 var buttons = '<a class="btn btn-warning" ui-sref="calendareventstatuses/:id({id:' + data.calendarEventStatusID + '})">' +
@@ -40,14 +49,6 @@
                 }
                 return buttons;
             }
-
-            $scope.delete = function (id) {
-                if (confirm('Are you sure?')) {
-                    CalendarEventStatuses.deleteItem(id).then(function (response) {
-                        $window.location.reload();
-                    });
-                }
-            };
         }
     ]);
 });

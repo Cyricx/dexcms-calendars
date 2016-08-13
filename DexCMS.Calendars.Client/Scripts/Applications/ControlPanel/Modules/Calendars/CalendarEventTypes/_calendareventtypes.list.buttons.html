@@ -1,0 +1,11 @@
+﻿<a class="btn btn-warning" ui-sref="calendareventtypes/:id({id:item.calendarEventTypeID})">
+    <i class="fa fa-edit"></i>
+</a>
+
+<button ng-if="item.calendarEventCount == 0" class="btn btn-danger"
+        ng-click="table.functions.remove(item.calendarEventTypeID)">
+    <i class="fa fa-trash-o"></i>
+</button>
+<button ng-if="item.calendarEventCount != 0" class="btn btn-danger" ng-disabled="true">
+    Currently in use
+</button>

@@ -54,18 +54,22 @@
     <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\Calendars\calendars.list.controller.js" />
     <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\Calendars\calendars.service.js" />
     <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\Calendars\index.js" />
-    <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\module.js" />
     <Content Include="package.json" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventLocations\calendareventlocations.editor.html" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventLocations\calendareventlocations.list.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventLocations\_calendareventlocations.list.buttons.html" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventStatuses\calendareventstatuses.editor.html" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventStatuses\calendareventstatuses.list.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventStatuses\_calendareventstatuses.list.buttons.html" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEvents\calendarevents.editor.html" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEvents\calendarevents.list.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEvents\_calendarevents.list.buttons.html" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventTypes\calendareventtypes.editor.html" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventTypes\calendareventtypes.list.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventTypes\_calendareventtypes.list.buttons.html" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\Calendars\calendars.editor.html" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\Calendars\calendars.list.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\Calendars\_calendars.list.buttons.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Configurations\" />
