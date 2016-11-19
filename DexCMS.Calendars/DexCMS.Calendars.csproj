@@ -58,6 +58,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexts\IDexCMSCalendarsContext.cs" />
+    <Compile Include="Globals\CalendarsInitializer.cs" />
+    <Compile Include="Globals\Initializers\CalendarEventStatusInitializer.cs" />
+    <Compile Include="Globals\Initializers\CalendarRepeatDayInitializer.cs" />
+    <Compile Include="Globals\Initializers\CalendarRepeatTypeInitializer.cs" />
     <Compile Include="Repositories\CalendarEventLocationRepository.cs" />
     <Compile Include="Repositories\CalendarEventRepository.cs" />
     <Compile Include="Repositories\CalendarEventStatusRepository.cs" />
@@ -86,6 +90,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

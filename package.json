@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0-alpha",
+  "version": "0.3.0-alpha",
   "name": "dexcms-calendars",
   "description": "Calendars library for Dex CMS",
   "keywords": [ ".net", "cms", "framework" ],
@@ -7,7 +7,7 @@
   "bugs": "https://github.com/Cyricx/dexcms-calendars/issues",
   "license": "MIT",
   "dependencies": {
-    "dexcms-core": "https://github.com/Cyricx/dexcms-core.git#0.1.0-alpha"
+    "dexcms-core": "https://github.com/Cyricx/dexcms-core.git#0.4.0-alpha"
   },
   "devDependencies": {
     "grunt": "1.0.1",
