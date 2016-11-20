@@ -58,10 +58,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexts\IDexCMSCalendarsContext.cs" />
-    <Compile Include="Globals\CalendarsInitializer.cs" />
-    <Compile Include="Globals\Initializers\CalendarEventStatusInitializer.cs" />
-    <Compile Include="Globals\Initializers\CalendarRepeatDayInitializer.cs" />
-    <Compile Include="Globals\Initializers\CalendarRepeatTypeInitializer.cs" />
+    <Compile Include="Initializers\CalendarsInitializer.cs" />
+    <Compile Include="Initializers\CalendarEventStatusInitializer.cs" />
+    <Compile Include="Initializers\CalendarRepeatDayInitializer.cs" />
+    <Compile Include="Initializers\CalendarRepeatTypeInitializer.cs" />
     <Compile Include="Repositories\CalendarEventLocationRepository.cs" />
     <Compile Include="Repositories\CalendarEventRepository.cs" />
     <Compile Include="Repositories\CalendarEventStatusRepository.cs" />

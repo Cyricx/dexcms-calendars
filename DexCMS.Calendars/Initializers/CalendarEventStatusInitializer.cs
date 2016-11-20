@@ -3,7 +3,7 @@ using DexCMS.Calendars.Models;
 using DexCMS.Core.Infrastructure.Globals;
 using System.Data.Entity.Migrations;
 
-namespace DexCMS.Calendars.Globals.Initializers
+namespace DexCMS.Calendars.Initializers
 {
     class CalendarEventStatusInitializer : DexCMSInitializer<IDexCMSCalendarsContext>
     {
