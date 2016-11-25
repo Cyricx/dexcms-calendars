@@ -10,12 +10,12 @@ module.exports = function (grunt) {
                 src: ['DexCMS.Calendars.dll'],
                 dest: 'dist/'
             },
-            //mvc: {
-            //    expand: true,
-            //    cwd: 'DexCMS.Calendars.Mvc/bin/Release/',
-            //    src: ['DexCMS.Calendars.Mvc.dll'],
-            //    dest: 'dist/'
-            //},
+            mvc: {
+                expand: true,
+                cwd: 'DexCMS.Calendars.Mvc/bin/Release/',
+                src: ['DexCMS.Calendars.Mvc.dll'],
+                dest: 'dist/'
+            },
             webapi: {
                 expand: true,
                 cwd: 'DexCMS.Calendars.WebApi/bin/Release/',
