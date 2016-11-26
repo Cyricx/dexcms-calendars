@@ -73,6 +73,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalendarsMvcRoutes.cs" />
     <Compile Include="Controllers\CalendarController.cs" />
     <Compile Include="Models\DisplayEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
