@@ -7,7 +7,8 @@
   "bugs": "https://github.com/Cyricx/dexcms-calendars/issues",
   "license": "MIT",
   "dependencies": {
-    "dexcms-core": "https://github.com/Cyricx/dexcms-core.git#development"
+    "dexcms-core": "https://github.com/Cyricx/dexcms-core.git#development",
+    "dexcms-base": "https://github.com/Cyricx/dexcms-base.git#development"
   },
   "devDependencies": {
     "grunt": "1.0.1",
