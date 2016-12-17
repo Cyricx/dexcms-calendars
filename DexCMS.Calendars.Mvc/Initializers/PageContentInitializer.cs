@@ -8,13 +8,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DexCMS.Base.Initializers.Helpers;
 
 namespace DexCMS.Calendars.Mvc.Initializers
 {
     class PageContentInitializer : DexCMSInitializer<IDexCMSBaseContext>
     {
+        private AreasReference Areas;
+        private CategoriesReference Categories;
+        private PageTypesReference PageTypes;
+        private LayoutTypesReference LayoutTypes;
+
         public PageContentInitializer(IDexCMSBaseContext context) : base(context)
         {
+            Areas = new AreasReference(context);
+            PageTypes = new PageTypesReference(context);
+            LayoutTypes = new LayoutTypesReference(context);
         }
 
         public override void Run()
@@ -32,10 +41,11 @@ namespace DexCMS.Calendars.Mvc.Initializers
                     LastModified = Today,
                     AddToSitemap = false,
                     Heading = "Calendar",
-                    ContentAreaID = Public,
+                    ContentAreaID = Areas.Public,
                     ContentCategoryID = null,
                     UrlSegment = "calendar",
-                    PageTypeID = SiteContent
+                    PageTypeID = PageTypes.SiteContent,
+                    LayoutTypeID = LayoutTypes.OneColumn
                 }
             );
             Context.SaveChanges();

@@ -8,13 +8,9 @@
     @DexCMSRender.StylesWithVersion("~/libs/qtip2/jquery.qtip.min.css")
 }
 
-<h2>@ViewBag.PageContent.Heading</h2>
-
 <div id='loading'>loading...</div>
 <div id='calendar'></div>
 
-@Html.Raw(ViewBag.PageContent.Body)
-    
 @section scripts {
     @DexCMSRender.ScriptsWithVersion("~/libs/moment/moment.min.js")
     @DexCMSRender.ScriptsWithVersion("~/libs/fullcalendar/fullcalendar.min.js")

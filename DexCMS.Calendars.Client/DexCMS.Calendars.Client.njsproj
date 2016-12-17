@@ -55,6 +55,8 @@
     <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\Calendars\calendars.service.js" />
     <Compile Include="Scripts\Applications\ControlPanel\Modules\Calendars\Calendars\index.js" />
     <Content Include="package.json" />
+    <Content Include="Sass\Applications\PublicSite\_calendar-variables.scss" />
+    <Content Include="Sass\Applications\PublicSite\_calendar.scss" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventLocations\calendareventlocations.editor.html" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventLocations\calendareventlocations.list.html" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventLocations\_calendareventlocations.list.buttons.html" />
@@ -73,6 +75,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Configurations\" />
+    <Folder Include="Sass\" />
+    <Folder Include="Sass\Applications\" />
+    <Folder Include="Sass\Applications\PublicSite\" />
     <Folder Include="Scripts\" />
     <Folder Include="Scripts\Applications\" />
     <Folder Include="Scripts\Applications\ControlPanel\" />
