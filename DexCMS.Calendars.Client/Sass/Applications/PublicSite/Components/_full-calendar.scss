@@ -1,0 +1,81 @@
+﻿///<reference path="../../../../../node_modules/compass-mixins/lib/compass/css3/_box-shadow.scss" />
+///<reference path="../_calendar-variables.scss" />
+
+#calendar {
+    background-color: $calendar-background-color;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: .25em;
+
+    .fc-today {
+        background-color: $calendar-today-background-color;
+    }
+
+    .fc-event {
+        cursor: pointer;
+        background-color: $calendar-event-background-color;
+        border-color: $calendar-event-border-color;
+        color: $calendar-event-font-color;
+    }
+
+    .fc-content {
+        > span {
+            display: block;
+        }
+
+        .fc-time {
+            font-weight: normal;
+            font-size: .8em;
+        }
+
+        .fc-title {
+            font-weight: bold;
+        }
+
+        .fc-location {
+            font-style: italic;
+            font-size: .9em;
+        }
+    }
+
+    .fc-more {
+        @extend %button-appearance;
+    }
+
+    .fc-center {
+        display: block;
+        clear: both;
+        text-align: center;
+
+        h2 {
+            float: none;
+            margin-top: 1.5em;
+        }
+    }
+
+    &.fc-unthemed {
+        .fc-divider, .fc-popover, .fc-row, tbody, td, th, thead {
+            border-color: $calendar-table-border-color;
+        }
+    }
+}
+
+.fc-toolbar {
+    padding-top: 1em;
+}
+
+.fc button.fc-button {
+    @extend %button-appearance;
+    background-image: none;
+
+    &.fc-state-active {
+        @include box-shadow($calendar-button-active-shadow-color 0 0 10px);
+        color: $calendar-button-active-font-color;
+    }
+
+    &.fc-state-disabled {
+        cursor: default;
+        @include box-shadow(none);
+        color: $calendar-button-disabled-font-color;
+    }
+}

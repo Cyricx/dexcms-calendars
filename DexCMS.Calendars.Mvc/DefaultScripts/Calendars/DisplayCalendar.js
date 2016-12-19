@@ -38,7 +38,7 @@
         timezone: currentTimezone,
         ignoreTimezone: false,
         displayEventEnd: true,
-        eventLimit: true, 
+        eventLimit: true,
         eventLimitText: 'events',
         events: {
             url: DEXCMS_GLOBALS.ROOT_PATH + '/Calendar/GetEvents',
@@ -99,7 +99,8 @@
                 "<div>" +
 
                     "<h3>" + data.title + "</h3>" +
-                    "<span class='" + data.type.toLowerCase().replace(' ', '-') + "'>" + data.type + "</span>" +
+                    (data.type ? "<span class='" + data.type.toLowerCase().replace(' ', '-') + "'>" + data.type + "</span>" : "")
+                     +
                     "<em>" + timeInfo + "</em>" +
                 "</div>" +
                 "<div>" +

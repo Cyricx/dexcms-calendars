@@ -1,2 +1,22 @@
 ﻿///<reference path="../../../../node_modules/dexcms-core/dexcms.core.client/sass/_variables.scss">
 
+$calendar-background-color: rgba($cOne, .85) !default;
+$calendar-today-background-color: $cFour !default;
+
+$calendar-event-background-color: darken($cOne, 60%) !default;
+$calendar-event-border-color: $cFour !default;
+$calendar-event-font-color: $cOne !default;
+
+$calendar-table-border-color: $cTwo !default;
+
+$calendar-loading-font-color: $cOne !default;
+$calendar-loading-background-color: $cThree !default;
+$calendar-loading-border-color: $cOne !default;
+
+$calendar-button-active-shadow-color: darken($cOne, 60%) !default;
+$calendar-button-active-font-color: $cFour !default;
+$calendar-button-disabled-font-color: $cOne !default;
+
+$calendar-popup-background-color: $cFour !default;
+$calendar-popup-border-color: darken($cOne, 60%) !default;
+$calendar-popup-heading-font-family: $ffTwo !default;

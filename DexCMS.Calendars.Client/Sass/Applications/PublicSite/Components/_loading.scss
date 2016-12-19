@@ -1,0 +1,19 @@
+﻿///<reference path="../_calendar-variables.scss" />
+
+#loading {
+    position: absolute;
+    left: 40%;
+    opacity: 0;
+    top: 0;
+    color: $calendar-loading-font-color;
+    background-color: $calendar-loading-background-color;
+    border: 1px solid $calendar-loading-border-color;
+    border-radius: .5em;
+    padding: 1em;
+    font-weight: bold;
+    font-size: 1.5em;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}

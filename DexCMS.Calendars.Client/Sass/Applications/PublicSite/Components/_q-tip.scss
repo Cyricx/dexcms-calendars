@@ -1,0 +1,60 @@
+﻿///<reference path="../../../../../node_modules/compass-mixins/lib/compass/css3/_box-shadow.scss" />
+///<reference path="../_calendar-variables.scss" />
+
+.qtip.calendar-details {
+    background-color: $calendar-popup-background-color;
+    font-size: 1.2em;
+    max-width: 300px;
+    line-height: 1.2em;
+    border-color: $calendar-popup-border-color;
+    border-radius: .5em;
+
+    .qtip-content {
+        padding: 0;
+
+        > div {
+            padding: .5em;
+        }
+
+        > div:first-child {
+            border-bottom: 1px solid $calendar-popup-border-color;
+
+            > span {
+                float: right;
+                font-size: .7em;
+                font-style: italic;
+                border: 1px solid $calendar-popup-border-color;
+            }
+        }
+
+        h3 {
+            font-size: 1.5em;
+            line-height: 1.1em;
+            font-family: $calendar-popup-heading-font-family;
+        }
+
+        em {
+            font-style: italic;
+            font-size: .8em;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        > div:nth-child(3) {
+            border-top: 1px solid $calendar-popup-border-color;
+
+            strong {
+                display: block;
+            }
+
+            p {
+                font-size: .8em;
+            }
+        }
+    }
+    .qtip-close {
+        @extend %button-appearance;
+    }
+}

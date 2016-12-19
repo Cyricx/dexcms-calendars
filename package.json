@@ -15,6 +15,7 @@
     "dexcms-core": "git+https://git@github.com/Cyricx/dexcms-core.git#development"
   },
   "devDependencies": {
+    "compass-mixins": "0.12.10",
     "grunt": "1.0.1",
     "grunt-cli": "1.2.0",
     "grunt-contrib-copy": "1.0.0",
