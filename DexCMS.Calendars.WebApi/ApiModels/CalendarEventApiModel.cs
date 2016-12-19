@@ -42,7 +42,7 @@ namespace DexCMS.Calendars.WebApi.ApiModels
 
         public int CalendarID { get; set; }
 
-        public bool Disabled { get; set; }
+        public bool IsDisabled { get; set; }
 
     }
 }

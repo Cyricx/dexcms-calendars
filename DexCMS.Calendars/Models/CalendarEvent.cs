@@ -68,7 +68,7 @@ namespace DexCMS.Calendars.Models
         [Required]
         public int CalendarID { get; set; }
 
-        public bool Disabled { get; set; }
+        public bool IsDisabled { get; set; }
 
 
         //! Relationships

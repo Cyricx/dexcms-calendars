@@ -24,7 +24,7 @@ namespace DexCMS.Calendars.Initializers
                 new CalendarEvent
                 {
                     Title = "All Day Sample",
-                    StartDate = new DateTime().Date,
+                    StartDate = new DateTime(2016, 12, 19),
                     Location = "Some Loc",
                     Details = "<p>Hodor hodor HODOR! Hodor hodor hodor. Hodor. Hodor. Hodor hodor hodor. Hodor. Hodor. Hodor HODOR hodor, hodor hodor hodor HODOR hodor, hodor hodor... Hodor hodor hodor. Hodor. Hodor, hodor. Hodor. Hodor, hodor; hodor hodor?! Hodor, hodor. Hodor. Hodor, hodor hodor HODOR hodor, hodor hodor. Hodor. Hodor hodor HODOR! Hodor hodor; hodor hodor, hodor. Hodor hodor - hodor?! </p>",
                     CalendarEventStatusID = Statuses.Confirmed,
@@ -32,33 +32,33 @@ namespace DexCMS.Calendars.Initializers
                     IsAllDay = true,
                     EventURL = "http://www.chrisbyram.com",
                     CalendarID = Calendars.Public,
-                    Disabled = false
+                    IsDisabled = false
                 },
                 new CalendarEvent
                 {
                     Title = "Single Day Time Range Sample",
-                    StartDate = new DateTime().Date.AddHours(18),
-                    EndDate = new DateTime().Date.AddHours(20),
+                    StartDate = new DateTime(2016, 12, 19, 18, 00, 00),
+                    EndDate = new DateTime(2016, 12, 19, 20, 00, 00),
                     Location = "Another Loc",
                     Details = "<p>Pasta ipsum dolor sit amet strozzapreti scialatelli cavatelli strozzapreti farfalline capellini lumache trenne paccheri sacchettoni foglie d'ulivo gramigna fiorentine calamaretti gramigna tagliatelle. Trofie casarecce zitoni pizzoccheri mafaldine capunti scialatelli penne. Sorprese cavatappi radiatori sagne 'ncannulate pillus mezzi bombardoni ravioli capellini. Elicoidali sacchettoni rigatoncini mafalde mafaldine rotelle tagliatelle lumaconi penne lisce fusilli pennette lasagnette mezzi bombardoni trofie tortiglioni. Rigatoni fagioloni fusilli bucati scialatelli garganelli spaghetti calamaretti radiatori foglie d'ulivo farfalle rotelle capellini tripoline pasta al ceppo tripoline. Mafaldine calamarata spirali acini di pepe sagne 'ncannulate fusilli bucati mezzelune.</p>",
                     CalendarEventStatusID = Statuses.Confirmed,
                     IsRepeating = false,
                     IsAllDay = false,
                     CalendarID = Calendars.Public,
-                    Disabled = false
+                    IsDisabled = false
                 },
                 new CalendarEvent
                 {
                     Title = "Multi Day Time Range Sample",
-                    StartDate = new DateTime().Date.AddDays(2).AddHours(18),
-                    EndDate = new DateTime().Date.AddDays(4).AddHours(18),
+                    StartDate = new DateTime(2016, 12, 21, 18, 00, 00),
+                    EndDate = new DateTime(2016, 12, 23, 18, 00, 00),
                     Location = "Other Loc",
                     Details = "<p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.</p>",
                     CalendarEventStatusID = Statuses.Tentative,
                     IsRepeating = false,
                     IsAllDay = false,
                     CalendarID = Calendars.Public,
-                    Disabled = false
+                    IsDisabled = false
                 }
                 );
             Context.SaveChanges();

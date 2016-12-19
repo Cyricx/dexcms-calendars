@@ -29,7 +29,7 @@ namespace DexCMS.Calendars.Repositories
 
             var events = from evt in _ctx.CalendarEvents.Where(c => c.CalendarID == calendarID).ToList()
                          where
-                            evt.Disabled != true
+                            evt.IsDisabled != true
                             &&
                             (
                                 //starts on this date

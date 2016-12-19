@@ -50,7 +50,7 @@ namespace DexCMS.Calendars.WebApi.Controllers
                     RepeatCountEnd = x.RepeatCountEnd,
                     RepeatEndDate = x.RepeatEndDate,
                     CalendarID = x.CalendarID,
-                    Disabled = x.Disabled
+                    IsDisabled = x.IsDisabled
                 });
                 }
 
@@ -91,8 +91,8 @@ namespace DexCMS.Calendars.WebApi.Controllers
 				RepeatCountEnd = calendarEvent.RepeatCountEnd,
 				RepeatEndDate = calendarEvent.RepeatEndDate,
 				CalendarID = calendarEvent.CalendarID,
-			    Disabled = calendarEvent.Disabled
-			};
+                IsDisabled = calendarEvent.IsDisabled
+            };
 
             return Ok(model);
         }
