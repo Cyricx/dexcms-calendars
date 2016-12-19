@@ -41,7 +41,7 @@
         eventLimit: true, 
         eventLimitText: 'events',
         events: {
-            url: '@Url.Content("~/Calendar/GetEvents")',
+            url: DEXCMS_GLOBALS.ROOT_PATH + '/Calendar/GetEvents',
             error: function () {
                 $('#script-warning').show();
             },

@@ -48,7 +48,7 @@ namespace DexCMS.Calendars.Mvc.Controllers
                               details = x.Details,
                               className = x.CssClass,
                               status = x.CalendarEventStatus.Name,
-                              type = x.CalendarEventType.Name
+                              type = x.CalendarEventTypeID.HasValue ? x.CalendarEventType.Name : ""
                           }).ToList();
 
 
