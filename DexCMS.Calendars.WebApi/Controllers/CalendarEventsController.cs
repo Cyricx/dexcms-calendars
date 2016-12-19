@@ -38,7 +38,7 @@ namespace DexCMS.Calendars.WebApi.Controllers
                     CalendarEventLocationName = (x.CalendarEventLocationID.HasValue ? x.CalendarEventLocation.Name : ""),
                     Details = x.Details,
                     CalendarEventTypeID = x.CalendarEventTypeID,
-                    CalendarEventTypeName = x.CalendarEventType.Name,
+                    CalendarEventTypeName = x.CalendarEventTypeID.HasValue ? x.CalendarEventType.Name : "",
                     CalendarEventStatusID = x.CalendarEventStatusID,
                     CalendarEventStatusName = x.CalendarEventStatus.Name,
                     IsRepeating = x.IsRepeating,
@@ -49,7 +49,8 @@ namespace DexCMS.Calendars.WebApi.Controllers
                     RepeatCount = x.RepeatCount,
                     RepeatCountEnd = x.RepeatCountEnd,
                     RepeatEndDate = x.RepeatEndDate,
-                    CalendarID = x.CalendarID
+                    CalendarID = x.CalendarID,
+                    Disabled = x.Disabled
                 });
                 }
 
@@ -89,8 +90,8 @@ namespace DexCMS.Calendars.WebApi.Controllers
 				RepeatCount = calendarEvent.RepeatCount,
 				RepeatCountEnd = calendarEvent.RepeatCountEnd,
 				RepeatEndDate = calendarEvent.RepeatEndDate,
-				CalendarID = calendarEvent.CalendarID
-			
+				CalendarID = calendarEvent.CalendarID,
+			    Disabled = calendarEvent.Disabled
 			};
 
             return Ok(model);

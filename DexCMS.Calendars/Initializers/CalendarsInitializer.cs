@@ -11,9 +11,11 @@ namespace DexCMS.Calendars.Initializers
 
         public override void Run()
         {
+            (new CalendarInitializer(Context)).Run();
             (new CalendarEventStatusInitializer(Context)).Run();
             (new CalendarRepeatDayInitializer(Context)).Run();
             (new CalendarRepeatTypeInitializer(Context)).Run();
+            (new CalendarEventInitializer(Context)).Run();
         }
     }
 }

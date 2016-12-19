@@ -53,13 +53,19 @@
             </div>
             <div class="form-group">
                 <label for="calendarEventTypeID">Event Type:</label>
-                <select name="calendarEventTypeID" id="calendarEventTypeID" ng-model="currentItem.calendarEventTypeID" required
+                <select name="calendarEventTypeID" id="calendarEventTypeID" ng-model="currentItem.calendarEventTypeID"
                         ng-options="item.calendarEventTypeID as item.name for item in calendarEventTypes"></select>
             </div>
             <div class="form-group">
                 <label for="calendarEventStatusID">Event Status:</label>
                 <select name="calendarEventStatusID" id="calendarEventStatusID" ng-model="currentItem.calendarEventStatusID" required
                         ng-options="item.calendarEventStatusID as item.name for item in calendarEventStatuses"></select>
+            </div>
+            <div class="form-group checkbox">
+                <label>
+                    <input type="checkbox" id="disabled" name="disabled" ng-model="currentItem.disabled">
+                    Disabled?
+                </label>
             </div>
             <div class="form-group">
                 <label for="cssClass">CSS Class:</label>

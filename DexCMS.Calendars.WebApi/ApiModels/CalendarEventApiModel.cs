@@ -18,7 +18,7 @@ namespace DexCMS.Calendars.WebApi.ApiModels
 
         public string Details { get; set; }
 
-        public int CalendarEventTypeID { get; set; }
+        public int? CalendarEventTypeID { get; set; }
         public string CalendarEventTypeName { get; set; }
 
         public int CalendarEventStatusID { get; set; }
@@ -41,6 +41,8 @@ namespace DexCMS.Calendars.WebApi.ApiModels
         public DateTime? RepeatEndDate { get; set; }
 
         public int CalendarID { get; set; }
+
+        public bool Disabled { get; set; }
 
     }
 }

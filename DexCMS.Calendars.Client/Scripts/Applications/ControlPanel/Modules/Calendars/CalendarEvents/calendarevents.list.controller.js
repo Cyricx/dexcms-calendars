@@ -36,6 +36,7 @@
                     },
                     { property: 'calendarEventTypeName', title: 'Type' },
                     { property: 'calendarEventStatusName', title: 'Status' },
+                    { property: 'disabled', title: 'Disabled' },
                     {
                         property: '', title: '', disableSorting: true,
                         dataTemplate: dexcmsSettings.startingRoute + 'modules/calendars/calendarevents/_calendarevents.list.buttons.html'

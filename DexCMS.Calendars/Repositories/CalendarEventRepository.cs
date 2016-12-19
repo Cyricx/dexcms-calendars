@@ -29,17 +29,21 @@ namespace DexCMS.Calendars.Repositories
 
             var events = from evt in _ctx.CalendarEvents.Where(c => c.CalendarID == calendarID).ToList()
                          where
-                            //starts on this date
-                            evt.StartDate.AddHours(timezoneOffset).Date == date.Date ||
-                            //ends on this date
-                            (evt.EndDate.HasValue && evt.EndDate.Value.AddHours(timezoneOffset).Date == date.Date
-                            //and it is still going after noon
-                            //&& evt.EndDate.Value.AddHours(timezoneOffset).Hour  > 12
-                            )
+                            evt.Disabled != true
+                            &&
+                            (
+                                //starts on this date
+                                evt.StartDate.AddHours(timezoneOffset).Date == date.Date ||
+                                //ends on this date
+                                (evt.EndDate.HasValue && evt.EndDate.Value.AddHours(timezoneOffset).Date == date.Date
+                                //and it is still going after noon
+                                //&& evt.EndDate.Value.AddHours(timezoneOffset).Hour  > 12
+                                )
 
-                            ||
-                            //started before this date and ends after this date
-                            (evt.StartDate.AddHours(timezoneOffset).Date < date.Date && evt.EndDate.HasValue && evt.EndDate.Value.AddHours(-5).Date > date.Date)
+                                ||
+                                //started before this date and ends after this date
+                                (evt.StartDate.AddHours(timezoneOffset).Date < date.Date && evt.EndDate.HasValue && evt.EndDate.Value.AddHours(-5).Date > date.Date)
+                            )
                          select evt;
             return events.ToList();
         }

@@ -20,7 +20,7 @@
 
             $scope.title = (id == null ? "Add " : "Edit ") + "Calendar Event";
 
-            $scope.currentItem = { isRepeating: false};
+            $scope.currentItem = { isRepeating: false, disabled: false };
 
             if (id != null) {
                 CalendarEvents.getItem(id).then(function (response) {

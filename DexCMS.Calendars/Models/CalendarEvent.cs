@@ -35,8 +35,7 @@ namespace DexCMS.Calendars.Models
         [MaxLength]
         public string Details { get; set; }
 
-        [Required]
-        public int CalendarEventTypeID { get; set; }
+        public int? CalendarEventTypeID { get; set; }
 
         
         [Required]
@@ -69,13 +68,8 @@ namespace DexCMS.Calendars.Models
         [Required]
         public int CalendarID { get; set; }
 
-        //[Required]
-        //public bool CanDayPass { get; set; }
-        
-        //[Column(TypeName = "Money")]
-        //[DataType(DataType.Currency)]
-        //public decimal? DayPassFee { get; set; }
-        
+        public bool Disabled { get; set; }
+
 
         //! Relationships
 
