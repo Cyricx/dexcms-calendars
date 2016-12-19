@@ -58,9 +58,9 @@
     <Content Include="Sass\Applications\PublicSite\Components\_full-calendar.scss" />
     <Content Include="Sass\Applications\PublicSite\Components\_q-tip.scss" />
     <Content Include="Sass\Applications\PublicSite\Components\_loading.scss" />
-    <Content Include="Sass\Applications\PublicSite\_calendar-components.scss" />
-    <Content Include="Sass\Applications\PublicSite\_calendar-variables.scss" />
-    <Content Include="Sass\Applications\PublicSite\_calendar.scss" />
+    <Content Include="Sass\Applications\PublicSite\_calendars-components.scss" />
+    <Content Include="Sass\Applications\PublicSite\_calendars-variables.scss" />
+    <Content Include="Sass\Applications\PublicSite\_calendars.scss" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventLocations\calendareventlocations.editor.html" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventLocations\calendareventlocations.list.html" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Calendars\CalendarEventLocations\_calendareventlocations.list.buttons.html" />
