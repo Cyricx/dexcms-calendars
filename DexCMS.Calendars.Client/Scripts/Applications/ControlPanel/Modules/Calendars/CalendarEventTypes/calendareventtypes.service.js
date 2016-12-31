@@ -5,7 +5,7 @@
         '$resource',
         '$http',
         function ($resource, $http) {
-            var baseUrl = '../api/calendarEventTypes';
+            var baseUrl = '../api/calendareventtypes';
 
             return {
                 //Create new record
