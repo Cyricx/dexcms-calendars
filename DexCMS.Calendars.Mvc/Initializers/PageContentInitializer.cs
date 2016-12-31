@@ -45,7 +45,9 @@ namespace DexCMS.Calendars.Mvc.Initializers
                     ContentCategoryID = null,
                     UrlSegment = "calendar",
                     PageTypeID = PageTypes.SiteContent,
-                    LayoutTypeID = LayoutTypes.OneColumn
+                    LayoutTypeID = LayoutTypes.OneColumn,
+                    IsDisabled = false,
+                    RequiresLogin = false
                 }
             );
             Context.SaveChanges();

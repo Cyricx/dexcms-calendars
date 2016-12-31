@@ -5,10 +5,11 @@ using System.Web.Mvc;
 using DexCMS.Calendars.Interfaces;
 using System.Web.Configuration;
 using DexCMS.Calendars.Mvc.Models;
+using DexCMS.Core.Mvc.Globals;
 
 namespace DexCMS.Calendars.Mvc.Controllers
 {
-    public class CalendarController : Controller
+    public class CalendarController : DexCMSController
     {
         private ICalendarRepository repository;
         private ICalendarEventRepository eventRepository;
