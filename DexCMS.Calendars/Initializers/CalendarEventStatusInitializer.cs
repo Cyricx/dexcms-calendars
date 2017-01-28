@@ -11,7 +11,7 @@ namespace DexCMS.Calendars.Initializers
         {
         }
 
-        public override void Run()
+        public override void Run(bool addDemoContent = true)
         {
             Context.CalendarEventStatuses.AddOrUpdate(x => x.Name,
                 new CalendarEventStatus { Name = "Tentative", CssClass = "tentative", IsActive = true },

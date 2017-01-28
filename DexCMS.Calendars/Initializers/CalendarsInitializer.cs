@@ -1,21 +1,29 @@
-﻿using DexCMS.Calendars.Contexts;
+﻿using System;
+using System.Collections.Generic;
+using DexCMS.Calendars.Contexts;
 using DexCMS.Core.Infrastructure.Globals;
 
 namespace DexCMS.Calendars.Initializers
 {
-    public class CalendarsInitializer : DexCMSInitializer<IDexCMSCalendarsContext>
+    public class CalendarsInitializer : DexCMSLibraryInitializer<IDexCMSCalendarsContext>
     {
         public CalendarsInitializer(IDexCMSCalendarsContext context) : base(context)
         {
         }
 
-        public override void Run()
+        public override List<Type> Initializers
         {
-            (new CalendarInitializer(Context)).Run();
-            (new CalendarEventStatusInitializer(Context)).Run();
-            (new CalendarRepeatDayInitializer(Context)).Run();
-            (new CalendarRepeatTypeInitializer(Context)).Run();
-            (new CalendarEventInitializer(Context)).Run();
+            get
+            {
+                return new List<Type>
+                {
+                    typeof(CalendarInitializer),
+                    typeof(CalendarEventStatusInitializer),
+                    typeof(CalendarRepeatDayInitializer),
+                    typeof(CalendarRepeatTypeInitializer),
+                    typeof(CalendarEventInitializer)
+                };
+            }
         }
     }
 }

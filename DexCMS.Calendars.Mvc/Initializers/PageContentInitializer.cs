@@ -26,7 +26,7 @@ namespace DexCMS.Calendars.Mvc.Initializers
             LayoutTypes = new LayoutTypesReference(context);
         }
 
-        public override void Run()
+        public override void Run(bool addDemoContent = true)
         {
             DateTime Today = DateTime.Now;
             int Public = Context.ContentAreas.Where(x => x.Name == "Public").Select(x => x.ContentAreaID).Single();

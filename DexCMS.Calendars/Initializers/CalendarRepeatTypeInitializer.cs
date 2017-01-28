@@ -10,7 +10,7 @@ namespace DexCMS.Calendars.Initializers
         public CalendarRepeatTypeInitializer(IDexCMSCalendarsContext context) : base(context)
         {
         }
-        public override void Run()
+        public override void Run(bool addDemoContent = true)
         {
             Context.CalendarRepeatTypes.AddOrUpdate(x => x.Name,
                 new CalendarRepeatType { Name = "Daily", IsActive = true },

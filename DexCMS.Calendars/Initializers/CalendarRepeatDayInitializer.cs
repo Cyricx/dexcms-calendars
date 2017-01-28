@@ -11,7 +11,7 @@ namespace DexCMS.Calendars.Initializers
         {
         }
 
-        public override void Run()
+        public override void Run(bool addDemoContent = true)
         {
             Context.CalendarRepeatDays.AddOrUpdate(x => x.Name,
                 new CalendarRepeatDay { Name = "Sunday", IsActive = true },

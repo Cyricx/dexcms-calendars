@@ -11,7 +11,7 @@ namespace DexCMS.Calendars.Initializers
         {
         }
 
-        public override void Run()
+        public override void Run(bool addDemoContent = true)
         {
             Context.Calendars.AddIfNotExists(x => x.Title,
                 new Calendar { Title = "Public", IsActive = true });
