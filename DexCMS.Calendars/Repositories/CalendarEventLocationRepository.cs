@@ -1,7 +1,7 @@
-﻿using DexCMS.Core.Infrastructure.Repositories;
+﻿using DexCMS.Core.Repositories;
 using DexCMS.Calendars.Models;
 using DexCMS.Calendars.Interfaces;
-using DexCMS.Core.Infrastructure.Contexts;
+using DexCMS.Core.Contexts;
 using DexCMS.Calendars.Contexts;
 
 namespace DexCMS.Calendars.Repositories

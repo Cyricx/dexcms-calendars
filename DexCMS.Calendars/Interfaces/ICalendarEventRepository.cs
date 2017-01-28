@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using DexCMS.Calendars.Models;
-using DexCMS.Core.Infrastructure.Interfaces;
+using DexCMS.Core.Interfaces;
 
 namespace DexCMS.Calendars.Interfaces
 {

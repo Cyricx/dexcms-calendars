@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using DexCMS.Core.Infrastructure.Attributes;
+using DexCMS.Core.Attributes;
 
 namespace DexCMS.Calendars.Models
 {

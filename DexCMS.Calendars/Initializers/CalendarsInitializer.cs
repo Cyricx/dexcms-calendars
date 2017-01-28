@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using DexCMS.Calendars.Contexts;
-using DexCMS.Core.Infrastructure.Globals;
+using DexCMS.Core.Globals;
 
 namespace DexCMS.Calendars.Initializers
 {

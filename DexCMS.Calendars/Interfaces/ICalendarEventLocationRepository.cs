@@ -1,4 +1,4 @@
-﻿using DexCMS.Core.Infrastructure.Interfaces;
+﻿using DexCMS.Core.Interfaces;
 using DexCMS.Calendars.Models;
 
 namespace DexCMS.Calendars.Interfaces

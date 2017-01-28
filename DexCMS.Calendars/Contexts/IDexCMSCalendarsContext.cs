@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 using DexCMS.Calendars.Models;
-using DexCMS.Core.Infrastructure.Contexts;
+using DexCMS.Core.Contexts;
 
 namespace DexCMS.Calendars.Contexts
 {

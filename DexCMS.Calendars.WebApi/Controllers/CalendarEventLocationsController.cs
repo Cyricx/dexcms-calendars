@@ -11,7 +11,7 @@ using System.Web.Http.Description;
 using DexCMS.Calendars.Interfaces;
 using DexCMS.Calendars.Models;
 using DexCMS.Calendars.WebApi.ApiModels;
-using DexCMS.Core.Infrastructure.Extensions;
+using DexCMS.Core.Extensions;
 
 namespace DexCMS.Calendars.WebApi.Controllers
 {

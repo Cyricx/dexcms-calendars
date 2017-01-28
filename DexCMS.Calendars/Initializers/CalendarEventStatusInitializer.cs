@@ -1,6 +1,6 @@
 ﻿using DexCMS.Calendars.Contexts;
 using DexCMS.Calendars.Models;
-using DexCMS.Core.Infrastructure.Globals;
+using DexCMS.Core.Globals;
 using System.Data.Entity.Migrations;
 
 namespace DexCMS.Calendars.Initializers
