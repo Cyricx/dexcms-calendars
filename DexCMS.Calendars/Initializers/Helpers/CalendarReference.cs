@@ -13,7 +13,7 @@ namespace DexCMS.Calendars.Initializers.Helpers
 
         public CalendarReference(IDexCMSCalendarsContext Context)
         {
-            Public = Context.Calendars.Where(x => x.Title == "Public").Select(x => x.CalendarID).Single();
+            Public = Context.Calendars.Where(x => x.Title == "Public").Select(x => x.CalendarID).SingleOrDefault();
         }
     }
 }

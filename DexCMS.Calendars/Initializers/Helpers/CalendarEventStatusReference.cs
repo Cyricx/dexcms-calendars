@@ -14,8 +14,8 @@ namespace DexCMS.Calendars.Initializers.Helpers
 
         public CalendarEventStatusReference(IDexCMSCalendarsContext Context)
         {
-            Tentative = Context.CalendarEventStatuses.Where(x => x.Name == "Tentative").Select(x => x.CalendarEventStatusID).Single();
-            Confirmed = Context.CalendarEventStatuses.Where(x => x.Name == "Confirmed").Select(x => x.CalendarEventStatusID).Single();
+            Tentative = Context.CalendarEventStatuses.Where(x => x.Name == "Tentative").Select(x => x.CalendarEventStatusID).SingleOrDefault();
+            Confirmed = Context.CalendarEventStatuses.Where(x => x.Name == "Confirmed").Select(x => x.CalendarEventStatusID).SingleOrDefault();
         }
     }
 }

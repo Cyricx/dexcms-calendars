@@ -19,6 +19,7 @@ namespace DexCMS.Calendars.Initializers
                 {
                     typeof(CalendarInitializer),
                     typeof(CalendarEventStatusInitializer),
+                    typeof(CalendarEventLocationInitializer),
                     typeof(CalendarRepeatDayInitializer),
                     typeof(CalendarRepeatTypeInitializer),
                     typeof(CalendarEventInitializer)

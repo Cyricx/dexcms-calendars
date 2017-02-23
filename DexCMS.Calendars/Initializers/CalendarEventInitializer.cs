@@ -11,11 +11,13 @@ namespace DexCMS.Calendars.Initializers
     {
         private CalendarReference Calendars { get; set; }
         private CalendarEventStatusReference Statuses { get; set; }
+        private CalendarEventLocationReference Locations { get; set; }
 
         public CalendarEventInitializer(IDexCMSCalendarsContext Context) : base(Context)
         {
             Calendars = new CalendarReference(Context);
             Statuses = new CalendarEventStatusReference(Context);
+            Locations = new CalendarEventLocationReference(Context);
         }
 
         public override void Run(bool addDemoContent = true)
@@ -47,6 +49,7 @@ namespace DexCMS.Calendars.Initializers
                         IsRepeating = false,
                         IsAllDay = false,
                         CalendarID = Calendars.Public,
+                        CalendarEventLocationID = Locations.Place1,
                         IsDisabled = false
                     },
                     new CalendarEvent
@@ -60,6 +63,7 @@ namespace DexCMS.Calendars.Initializers
                         IsRepeating = false,
                         IsAllDay = false,
                         CalendarID = Calendars.Public,
+                        CalendarEventLocationID = Locations.Place2,
                         IsDisabled = false
                     }
                 );
